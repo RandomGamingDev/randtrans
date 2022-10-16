@@ -8,7 +8,6 @@ def RandomlyTranslate(translate, lang, times):
     global langs
     global translator
 
-    translate = ""
     prevLang = lang
     for i in range(times - 1):
         currentLang = random.choice(list(langs))
