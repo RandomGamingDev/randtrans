@@ -3,17 +3,17 @@ import googletrans
 
 langs = googletrans.LANGUAGES
 translator = googletrans.Translator()
-result = ""
+translate = ""
 
 def RandomlyTranslate(times, lang):
     global langs
     global translator
-    global result
+    global translate 
 
     prevLang = lang
     for i in range(times - 1):
         currentLang = random.choice(list(langs))
-        result = translator.translate(result, src=prevLang, dest=currentLang).text
+        translate = translator.translate(translate, src=prevLang, dest=currentLang).text
         prevLang = currentLang
-    result = translator.translate(result, src=prevLang, dest=lang).text
-    return result
+    translate = translator.translate(translate, src=prevLang, dest=lang).text
+    return translate 
